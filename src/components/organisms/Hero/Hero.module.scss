@@ -1,0 +1,10 @@
+.heroWrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: width 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+    height 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+    top 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+    left 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+    filter 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}

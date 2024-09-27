@@ -1,0 +1,16 @@
+// @import "../../templates/Section/Section.module.scss";
+
+.sideBySide {
+  display: flex;
+
+  &Right {
+    img {
+      order: 2;
+      width: 60%;
+    }
+  }
+
+  img {
+    width: 60%;
+  }
+}

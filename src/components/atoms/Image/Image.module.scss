@@ -1,0 +1,33 @@
+.image {
+  &.detailPageBg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.875rem;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+    transition: border-radius 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+      width 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+      height 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+      top 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+      left 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+      filter 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+      opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+
+    .active & {
+      border-radius: 0;
+      opacity: 1;
+      // ztransition: border-radius .5s cubic-bezier(0.19,1,0.22,1);
+    }
+
+    &.hide {
+      opacity: 0;
+      //   transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+      z-index: 0;
+    }
+  }
+}

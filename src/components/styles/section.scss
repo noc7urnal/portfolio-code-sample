@@ -1,0 +1,29 @@
+.section {
+  padding-left: 4.375rem;
+  min-height: 100dvh;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &__copy {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &__wrapper {
+      position: relative;
+      padding: 1.25rem;
+      max-width: 500px;
+    }
+  }
+
+  &:nth-child(even) {
+    background: #fafafa;
+  }
+
+  &:nth-child(odd) {
+    background: #ffffff;
+  }
+}

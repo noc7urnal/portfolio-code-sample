@@ -1,0 +1,23 @@
+@import "../../styles/global-styles.scss";
+
+.grid {
+  background-image: linear-gradient(
+    to top,
+    #ffffff,
+    #fefefe,
+    #f3f2f8,
+    #f3f4f9,
+    #f4f5fa
+  );
+  width: calc(100dvw - 2.5rem);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-column-gap: 2.5rem;
+  grid-row-gap: 2.5rem;
+  padding: 1.25rem;
+
+  @media screen and (min-width: $bp-xlarge) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

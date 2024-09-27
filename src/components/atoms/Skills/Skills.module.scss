@@ -1,0 +1,44 @@
+.skills {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+  margin: 0;
+  justify-content: flex-start;
+
+  & .tile {
+    @extend .skills;
+    background: red;
+  }
+
+  &Item {
+    text-align: center;
+    margin-right: 1.8rem;
+    white-space: nowrap;
+    margin-top: 1.4rem;
+    transition: transform 0.6s ease-in-out 1s;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    i {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      display: block;
+      opacity: 0.8;
+    }
+
+    &Text {
+      font-size: 0.6rem;
+      display: none;
+    }
+  }
+}
+
+@for $i from 1 to 100 {
+  .skillsItem:nth-child(#{$i}) {
+    transition-delay: $i * 0.03s;
+  }
+}

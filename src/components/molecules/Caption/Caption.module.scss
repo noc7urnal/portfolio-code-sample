@@ -1,0 +1,33 @@
+caption.text {
+  font-size: 0.75rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  font-weight: 600;
+  position: relative;
+  width: 100%;
+  display: block;
+
+  .left & {
+    text-align: right;
+
+    &:before {
+      right: 0;
+      left: auto;
+    }
+  }
+
+  .right & {
+    text-align: left;
+  }
+
+  &::before {
+    content: "";
+    height: 1px;
+    width: 9.375rem;
+    position: absolute;
+    background: #3d3d3d;
+    top: 0;
+    left: 0;
+    min-width: 100px;
+  }
+}

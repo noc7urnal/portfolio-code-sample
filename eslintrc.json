@@ -1,0 +1,79 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:json/recommended-with-comments",
+    "plugin:jsx-a11y/recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "globals": {},
+  "plugins": ["import", "react-hooks", "react", "tsdoc", "jsx-a11y"],
+  "rules": {
+    "no-console": ["error", { "allow": ["warn", "error", "info"] }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [],
+        "optionalDependencies": false,
+        "peerDependencies": true,
+        "bundledDependencies": false
+      }
+    ],
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/prefer-interface": "off",
+    "@typescript-eslint/prefer-as-const": "warn",
+    "@typescript-eslint/ban-types": "warn",
+    "@typescript-eslint/array-type": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false,
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "react/jsx-uses-vars": "error",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": [],
+        "paths": [
+        ]
+      }
+    ],
+    "no-duplicate-imports": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-inferrable-types": "error",
+    "arrow-body-style": "error",
+    "tsdoc/syntax": "warn",
+    "object-shorthand": "error"
+  },
+  "reportUnusedDisableDirectives": true,
+  "ignorePatterns": [
+    "public",
+    "src/lib",
+    "node_modules",
+    "*.config.js"
+  ]
+}
